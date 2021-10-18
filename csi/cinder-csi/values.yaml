@@ -1,0 +1,8 @@
+creds:
+  username: ""
+  password: ""
+  domainName: ""
+  authUrl: ""
+  tenantName: ""
+  region: ""
+
