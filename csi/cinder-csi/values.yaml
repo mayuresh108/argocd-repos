@@ -1,7 +1,7 @@
-username: ""
+username: "mayuresh@platform9.com"
 password: ""
-domainName: ""
-authUrl: ""
-tenantName: ""
-region: ""
+domainName: "default"
+authUrl: "https://df.platform9.net/keystone/v3"
+tenantName: "eng-dev"
+region: "us-mpt1-kvm"
 
