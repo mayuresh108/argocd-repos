@@ -1,5 +1,5 @@
 # ArgoCD repos
 
-Open up ArgoCD UI, use this apps in this repo to create applications in Argo.
+Open up ArgoCD UI on a PMK cluster, use apps in this repo to create applications in Argo.
 
 
