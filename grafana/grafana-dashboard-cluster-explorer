@@ -1668,6 +1668,7 @@
         "hide": 2,
         "multi": false,
         "name": "tag",
+        "query": "instance",
         "type": "constant"
       }
     ]

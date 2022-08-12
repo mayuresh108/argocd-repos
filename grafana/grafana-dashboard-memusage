@@ -502,12 +502,12 @@
           "refId": "A"
         },
         {
-          "expr": "sum(kube_pod_container_resource_requests_cpu_cores{exported_namespace=~\"$namespace\"})",
+          "expr": "sum(kube_pod_container_resource_requests_cpu_cores{namespace=~\"$namespace\"})",
           "legendFormat": "CPU Requests ",
           "refId": "B"
         },
         {
-          "expr": "sum(kube_pod_container_resource_limits_cpu_cores{exported_namespace=~\"$namespace\"})",
+          "expr": "sum(kube_pod_container_resource_limits_cpu_cores{namespace=~\"$namespace\"})",
           "legendFormat": "CPU Limits ",
           "refId": "C"
         }
@@ -608,12 +608,12 @@
           "refId": "A"
         },
         {
-          "expr": "sum(kube_pod_container_resource_requests_memory_bytes{exported_namespace=~\"$namespace\"})",
+          "expr": "sum(kube_pod_container_resource_requests_memory_bytes{namespace=~\"$namespace\"})",
           "legendFormat": "Memory Requests ",
           "refId": "B"
         },
         {
-          "expr": "sum(kube_pod_container_resource_limits_memory_bytes{exported_namespace=~\"$namespace\"})",
+          "expr": "sum(kube_pod_container_resource_limits_memory_bytes{namespace=~\"$namespace\"})",
           "legendFormat": "Memory Limits",
           "refId": "C"
         }
@@ -918,12 +918,12 @@
           "refId": "A"
         },
         {
-          "expr": "sum(kube_pod_container_resource_requests_cpu_cores{exported_namespace=~\"$namespace\", exported_pod=~\"$pod\"})",
+          "expr": "sum(kube_pod_container_resource_requests_cpu_cores{namespace=~\"$namespace\", pod=~\"$pod\"})",
           "legendFormat": "CPU Requests ",
           "refId": "B"
         },
         {
-          "expr": "sum(kube_pod_container_resource_limits_cpu_cores{exported_namespace=~\"$namespace\", exported_pod=~\"$pod\"})",
+          "expr": "sum(kube_pod_container_resource_limits_cpu_cores{namespace=~\"$namespace\", pod=~\"$pod\"})",
           "legendFormat": "CPU Limits ",
           "refId": "C"
         }
@@ -1024,12 +1024,12 @@
           "refId": "A"
         },
         {
-          "expr": "sum(kube_pod_container_resource_requests_memory_bytes{exported_namespace=~\"$namespace\", exported_pod=~\"$pod\"})",
+          "expr": "sum(kube_pod_container_resource_requests_memory_bytes{namespace=~\"$namespace\", pod=~\"$pod\"})",
           "legendFormat": "Memory Requests ",
           "refId": "B"
         },
         {
-          "expr": "sum(kube_pod_container_resource_limits_memory_bytes{exported_namespace=~\"$namespace\", exported_pod=~\"$pod\"})",
+          "expr": "sum(kube_pod_container_resource_limits_memory_bytes{namespace=~\"$namespace\", pod=~\"$pod\"})",
           "legendFormat": "Memory Limits ",
           "refId": "C"
         }
@@ -1334,12 +1334,12 @@
           "refId": "A"
         },
         {
-          "expr": "sum(kube_pod_container_resource_requests_cpu_cores{exported_namespace=~\"$namespace\", exported_pod=~\"$pod\", container=~\"$container\"})",
+          "expr": "sum(kube_pod_container_resource_requests_cpu_cores{namespace=~\"$namespace\", pod=~\"$pod\", container=~\"$container\"})",
           "legendFormat": "CPU Requests ",
           "refId": "B"
         },
         {
-          "expr": "sum(kube_pod_container_resource_limits_cpu_cores{exported_namespace=~\"$namespace\", exported_pod=~\"$pod\", container=~\"$container\"})",
+          "expr": "sum(kube_pod_container_resource_limits_cpu_cores{namespace=~\"$namespace\", pod=~\"$pod\", container=~\"$container\"})",
           "legendFormat": "CPU Limits ",
           "refId": "C"
         }
@@ -1440,13 +1440,13 @@
           "refId": "A"
         },
         {
-          "expr": "sum(kube_pod_container_resource_requests_memory_bytes{exported_namespace=~\"$namespace\", exported_pod=~\"$pod\", container=~\"$container\"})",
+          "expr": "sum(kube_pod_container_resource_requests_memory_bytes{namespace=~\"$namespace\", pod=~\"$pod\", container=~\"$container\"})",
           "interval": "",
           "legendFormat": "Memory Requests",
           "refId": "B"
         },
         {
-          "expr": "sum(kube_pod_container_resource_limits_memory_bytes{exported_namespace=~\"$namespace\", exported_pod=~\"$pod\", container=~\"$container\"})",
+          "expr": "sum(kube_pod_container_resource_limits_memory_bytes{namespace=~\"$namespace\", pod=~\"$pod\", container=~\"$container\"})",
           "interval": "",
           "legendFormat": "Memory Limits",
           "refId": "C"
@@ -1536,14 +1536,14 @@
           ]
         },
         "datasource": "prometheus",
-        "definition": "label_values(kube_pod_info, exported_namespace)",
+        "definition": "label_values(kube_pod_info, namespace)",
         "hide": 0,
         "includeAll": false,
         "label": null,
         "multi": false,
         "name": "namespace",
         "options": [],
-        "query": "label_values(kube_pod_info, exported_namespace)",
+        "query": "label_values(kube_pod_info, namespace)",
         "refresh": 1,
         "regex": "",
         "skipUrlSync": false,
@@ -1567,14 +1567,14 @@
           ]
         },
         "datasource": "prometheus",
-        "definition": "label_values(kube_pod_info{exported_namespace=~\"$namespace\"}, exported_pod)",
+        "definition": "label_values(kube_pod_info{namespace=~\"$namespace\"}, pod)",
         "hide": 0,
         "includeAll": false,
         "label": null,
         "multi": false,
         "name": "pod",
         "options": [],
-        "query": "label_values(kube_pod_info{exported_namespace=~\"$namespace\"}, exported_pod)",
+        "query": "label_values(kube_pod_info{namespace=~\"$namespace\"}, pod)",
         "refresh": 1,
         "regex": "",
         "skipUrlSync": false,
@@ -1598,14 +1598,14 @@
           ]
         },
         "datasource": "prometheus",
-        "definition": "label_values(kube_pod_container_info{exported_namespace=~\"$namespace\", exported_pod=~\"$pod\"} , exported_container)",
+        "definition": "label_values(kube_pod_container_info{namespace=~\"$namespace\", pod=~\"$pod\"} , container)",
         "hide": 0,
         "includeAll": false,
         "label": null,
         "multi": false,
         "name": "container",
         "options": [],
-        "query": "label_values(kube_pod_container_info{exported_namespace=~\"$namespace\", exported_pod=~\"$pod\"} , exported_container)",
+        "query": "label_values(kube_pod_container_info{namespace=~\"$namespace\", pod=~\"$pod\"} , container)",
         "refresh": 1,
         "regex": "",
         "skipUrlSync": false,

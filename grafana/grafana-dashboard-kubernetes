@@ -861,7 +861,7 @@
       ],
       "targets": [
         {
-          "expr": "kube_deployment_status_replicas{exported_namespace=~\"$namespace\"}",
+          "expr": "kube_deployment_status_replicas{namespace=~\"$namespace\"}",
           "format": "time_series",
           "instant": true,
           "interval": "",
@@ -936,7 +936,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "sum(kube_deployment_status_replicas{exported_namespace=~\"$namespace\"})",
+          "expr": "sum(kube_deployment_status_replicas{namespace=~\"$namespace\"})",
           "format": "time_series",
           "intervalFactor": 1,
           "refId": "A"
@@ -1017,7 +1017,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "sum(kube_deployment_status_replicas_updated{exported_namespace=~\"$namespace\"})",
+          "expr": "sum(kube_deployment_status_replicas_updated{namespace=~\"$namespace\"})",
           "format": "time_series",
           "intervalFactor": 1,
           "refId": "A"
@@ -1098,7 +1098,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "sum(kube_deployment_status_replicas_unavailable{exported_namespace=~\"$namespace\"})",
+          "expr": "sum(kube_deployment_status_replicas_unavailable{namespace=~\"$namespace\"})",
           "format": "time_series",
           "intervalFactor": 1,
           "refId": "A"
@@ -1450,7 +1450,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "sum(kube_pod_status_phase{exported_namespace=~\"$namespace\", phase=\"Running\"})",
+          "expr": "sum(kube_pod_status_phase{namespace=~\"$namespace\", phase=\"Running\"})",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 1,
@@ -1532,7 +1532,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "sum(kube_pod_status_phase{exported_namespace=~\"$namespace\", phase=\"Pending\"})",
+          "expr": "sum(kube_pod_status_phase{namespace=~\"$namespace\", phase=\"Pending\"})",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 1,
@@ -1614,7 +1614,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "sum(kube_pod_status_phase{exported_namespace=~\"$namespace\", phase=\"Failed\"})",
+          "expr": "sum(kube_pod_status_phase{namespace=~\"$namespace\", phase=\"Failed\"})",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 1,
@@ -1696,7 +1696,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "sum(kube_pod_status_phase{exported_namespace=~\"$namespace\", phase=\"Succeeded\"})",
+          "expr": "sum(kube_pod_status_phase{namespace=~\"$namespace\", phase=\"Succeeded\"})",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 1,
@@ -1778,7 +1778,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "sum(kube_pod_status_phase{exported_namespace=~\"$namespace\", phase=\"Unknown\"})",
+          "expr": "sum(kube_pod_status_phase{namespace=~\"$namespace\", phase=\"Unknown\"})",
           "format": "time_series",
           "interval": "",
           "intervalFactor": 1,
@@ -1874,7 +1874,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "sum(kube_pod_container_status_running{exported_namespace=~\"$namespace\"})",
+          "expr": "sum(kube_pod_container_status_running{namespace=~\"$namespace\"})",
           "format": "time_series",
           "intervalFactor": 1,
           "refId": "A"
@@ -1955,7 +1955,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "sum(kube_pod_container_status_waiting{exported_namespace=~\"$namespace\"})",
+          "expr": "sum(kube_pod_container_status_waiting{namespace=~\"$namespace\"})",
           "format": "time_series",
           "intervalFactor": 1,
           "refId": "A"
@@ -2036,7 +2036,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "sum(kube_pod_container_status_terminated{exported_namespace=~\"$namespace\"})",
+          "expr": "sum(kube_pod_container_status_terminated{namespace=~\"$namespace\"})",
           "format": "time_series",
           "intervalFactor": 1,
           "refId": "A"
@@ -2117,7 +2117,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "sum(delta(kube_pod_container_status_restarts_total{exported_namespace=\"$namespace\"}[30m]))",
+          "expr": "sum(delta(kube_pod_container_status_restarts_total{namespace=\"$namespace\"}[30m]))",
           "format": "time_series",
           "intervalFactor": 1,
           "refId": "A"
@@ -2198,7 +2198,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "sum(kube_pod_container_resource_requests_cpu_cores{exported_namespace=~\"$namespace\", node=~\"$node\"})",
+          "expr": "sum(kube_pod_container_resource_requests_cpu_cores{namespace=~\"$namespace\", node=~\"$node\"})",
           "format": "time_series",
           "intervalFactor": 1,
           "refId": "A"
@@ -2279,7 +2279,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "sum(kube_pod_container_resource_requests_memory_bytes{exported_namespace=~\"$namespace\", node=~\"$node\"})",
+          "expr": "sum(kube_pod_container_resource_requests_memory_bytes{namespace=~\"$namespace\", node=~\"$node\"})",
           "format": "time_series",
           "intervalFactor": 1,
           "refId": "A"
@@ -2374,7 +2374,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "sum(kube_job_status_succeeded{exported_namespace=~\"$namespace\"})",
+          "expr": "sum(kube_job_status_succeeded{namespace=~\"$namespace\"})",
           "format": "time_series",
           "intervalFactor": 1,
           "refId": "A"
@@ -2455,7 +2455,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "sum(kube_job_status_active{exported_namespace=~\"$namespace\"})",
+          "expr": "sum(kube_job_status_active{namespace=~\"$namespace\"})",
           "format": "time_series",
           "intervalFactor": 1,
           "refId": "A"
@@ -2536,7 +2536,7 @@
       "tableColumn": "",
       "targets": [
         {
-          "expr": "sum(kube_job_status_failed{exported_namespace=~\"$namespace\"})",
+          "expr": "sum(kube_job_status_failed{namespace=~\"$namespace\"})",
           "format": "time_series",
           "intervalFactor": 1,
           "refId": "A"
@@ -2631,7 +2631,7 @@
         "multi": true,
         "name": "namespace",
         "options": [],
-        "query": "label_values(kube_pod_info, exported_namespace)",
+        "query": "label_values(kube_pod_info, namespace)",
         "refresh": 1,
         "regex": "",
         "skipUrlSync": false,
